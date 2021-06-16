@@ -82,6 +82,13 @@ int main() {
   cin >> dia >> mes >> ano;
   dataValida = validarData (dia, mes, ano);
 
+
+
+  while (dataValida == 0){
+  cin >> dia >> mes >> ano; 
+  dataValida = validarData (dia, mes, ano);
+  }
+
   // REESCREVER ENQUANTO (davaValida) EXECUTE as instruções
   if (dataValida) {
     k = dia + 2 * mes + (3*(mes+1))/5 + ano + ano/4 - ano/100 + ano/400 + 2;
